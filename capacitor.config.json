@@ -1,0 +1,6 @@
+{
+  "appId": "com.prizemaster.app",
+  "appName": "Prize Master",
+  "webDir": "dist",
+  "bundledWebRuntime": false
+}
