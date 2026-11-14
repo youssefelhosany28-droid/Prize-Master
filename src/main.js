@@ -52,7 +52,14 @@ function render() {
           <div class="balance"><strong id="balance">${coins}</strong><span>عملة</span></div>
           <div class="wallet-bottom"><span>استمر في اللعب لزيادة رصيدك</span><span class="wallet-gem">◆</span></div>
         </section>
-
+<section class="ad-card">
+  <div class="ad-icon">🎬</div>
+  <div class="ad-info">
+    <strong>شاهد إعلان واكسب كوينز</strong>
+    <small>شاهد فيديو واحصل على مكافأتك</small>
+  </div>
+  <button id="watchAdBtn">شاهد الآن ▶</button>
+</section>
         <section class="section-head">
           <div><span class="eyebrow">فرصتك مستنياك</span><h2>عجلة الحظ</h2></div>
           <span class="daily-pill">🎟 ${spins} محاولة</span>
