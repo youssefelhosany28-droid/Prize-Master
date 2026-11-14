@@ -1,15 +1,14 @@
 import './style.css';
 
 const app = document.querySelector('#app');
-let coins = Number(localStorage.getItem('pm_coins') || 120);
+let coins = Number(localStorage.getItem('pm_coins') || 0);
 let spins = Number(localStorage.getItem('pm_spins') || 1);
 let history = JSON.parse(localStorage.getItem('pm_history') || '[]');
 let busy = false;
 
 const rewards = [
-  { coins: 0, weight: 30, label: '0' },
+  { coins: 0, weight: 50, label: '0' },
   { coins: 1, weight: 40, label: '1' },
-  { coins: 2, weight: 20, label: '2' },
   { coins: 5, weight: 9, label: '5' },
   { coins: 10, weight: 1, label: '10' }
 ];
@@ -32,7 +31,7 @@ function render() {
     <div class="shell">
       <header class="topbar">
         <div class="brand">
-          <div class="brand-mark">P<span>★</span></div>
+          <img class="brand-logo" src="/icon.png" alt="Prize Master" />
           <div><strong>PRIZE MASTER</strong><small>العب • اجمع • اكسب</small></div>
         </div>
         <button class="avatar" aria-label="الملف الشخصي">👤</button>
@@ -64,14 +63,13 @@ function render() {
             <div class="pointer"></div>
             <div class="wheel" id="wheel">
               <div class="wheel-center">PM</div>
-              <span class="wlabel l1">5</span><span class="wlabel l2">10</span>
-              <span class="wlabel l3">25</span><span class="wlabel l4">50</span>
-              <span class="wlabel l5">100</span>
+              <span class="wlabel l0">0</span><span class="wlabel l1">1</span>
+              <span class="wlabel l5">5</span><span class="wlabel l10">10</span>
             </div>
           </div>
           <p class="wheel-caption">لف العجلة واكتشف جائزتك!</p>
           <button class="spin-btn" id="spinBtn">🎡 لف العجلة</button>
-          <p class="hint" id="hint">لديك محاولة مجانية تجريبية</p>
+          <p class="hint" id="hint">تجربة شكل العجلة — نظام المكافآت الحقيقي سيتم تفعيله بعد ربط الحسابات</p>
         </section>
 
         <section class="section-head tasks-head">
